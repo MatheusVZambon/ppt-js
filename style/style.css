@@ -1,0 +1,165 @@
+/*
+    SUMÁRIO
+
+    0. Configurações Gerais
+    1. Header
+    
+*/
+
+
+/* 0. Configurações Gerais */
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200;400;700&display=swap');
+
+:root{
+    --ptn-white : #FFF;
+    --opq-white : rgba(255, 255, 255, 0.4);
+    --ptn-green : #E6FFD6;
+    --ptn-dblue : #2B3A67;
+    --ptn-mblue : #496A81;
+    --ptn-dred  : #BD3131;
+
+    --ssf-kanit : 'Kanit', arial;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    background-color: var(--ptn-green);
+}
+
+/* 1. Header */
+
+header{
+    margin: 25px auto;
+}
+
+.header-title{
+    font: bold normal 36px var(--ssf-kanit);
+    color: var(--ptn-dblue);
+    text-align: center;
+}
+
+.header-instruction{
+    font: normal normal 24px var(--ssf-kanit);
+    color: var(--ptn-mblue);
+    text-align: center;
+}
+
+
+/* 2. Main */
+
+.main-interaction{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 100px;
+
+    margin-bottom: 25px;
+}
+
+.main-button-left,.main-button-right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    width: 200px;
+    height: 300px;
+
+    border-radius: 10px;
+}
+
+.main-button-left{
+    background-color: var(--ptn-dblue);
+}
+
+.main-button-right{
+    background-color: var(--ptn-dred);
+}
+
+.main-button-left-option,.main-button-right-option{
+    background-color: var(--ptn-white);
+
+    text-align: center;
+
+    border-radius: 7.5px;
+}
+
+.main-button-left-option{
+    cursor: pointer;
+
+    transition: all 0.2s ease-in-out;
+}
+
+.main-button-left-option:hover{
+    background-color: var(--opq-white);
+}
+
+.fa-solid{
+    padding: 15px 50px;
+
+    font-size: 30px;
+}
+
+.main-play-button{
+    background-color: var(--ptn-dblue);
+    border: 1px solid transparent;
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease-in-out;
+}
+
+.main-play-button:hover{
+    background-color: var(--ptn-green);
+
+    border-color: var(--ptn-dblue);
+}
+
+.main-play-button:hover > .main-play-button-text{
+    color: var(--ptn-dblue);
+}
+
+.main-play-button-text{
+    padding: 2.5px 20px;
+
+    font: bold normal 20px var(--ssf-kanit);
+    color: var(--ptn-green);
+}
+
+.main-result{
+    display: none;
+}
+
+
+/* 3. Footer */
+
+.footer-frame{
+    position: absolute;
+    width: 100vw;
+    bottom: 0;
+    left: 0;
+
+    text-align: center;
+
+    background-color: var(--ptn-mblue);
+}
+
+.footer-frame-text{
+    padding: 5px 0;
+
+    font: normal normal 16px var(--ssf-kanit);
+    color: var(--ptn-white);
+}
