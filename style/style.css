@@ -13,6 +13,7 @@
 
 :root{
     --ptn-white : #FFF;
+    --btn-gray  : #747474;
     --opq-white : rgba(255, 255, 255, 0.4);
     --ptn-green : #E6FFD6;
     --ptn-dblue : #2B3A67;
@@ -106,16 +107,40 @@ header{
     background-color: var(--opq-white);
 }
 
+.main-button-right-option{
+    transform: scaleX(-1);
+}
+
 .fa-solid{
-    padding: 15px 50px;
+    padding: 25px 25px;
+    margin: auto 25px;
 
     font-size: 30px;
+}
+
+.main-play-disabled{
+    background-color: var(--btn-gray);
+
+    padding: 2.5px 20px;
+
+    font: bold normal 20px var(--ssf-kanit);
+    color: var(--ptn-green);
+
+    border: 1px solid var(--btn-gray);
+    border-radius: 5px;
+
+    pointer-events: none;
 }
 
 .main-play-button{
     background-color: var(--ptn-dblue);
     border: 1px solid transparent;
     border-radius: 5px;
+
+    padding: 2.5px 20px;
+
+    font: bold normal 20px var(--ssf-kanit);
+    color: var(--ptn-green);
 
     cursor: pointer;
 
@@ -124,33 +149,113 @@ header{
 
 .main-play-button:hover{
     background-color: var(--ptn-green);
-
-    border-color: var(--ptn-dblue);
-}
-
-.main-play-button:hover > .main-play-button-text{
     color: var(--ptn-dblue);
-}
-
-.main-play-button-text{
-    padding: 2.5px 20px;
-
-    font: bold normal 20px var(--ssf-kanit);
-    color: var(--ptn-green);
+    border-color: var(--ptn-dblue);
 }
 
 .main-result{
     display: none;
+
+    margin-top: 15px;
 }
 
+.main-result-frame{
+    background-color: var(--ptn-dblue);
+    border-radius: 5px;
+}
+
+.main-result-frame-text{
+    padding: 10px 30px;
+
+    font: bold normal 24px var(--ssf-kanit);
+    color: var(--ptn-white);
+}
+
+.main-score{
+    display: flex;
+    flex-direction: row;
+
+    margin-top: 15px;
+
+    text-align: center;
+
+    background-color: var(--ptn-white);
+    border: 1px solid var(--ptn-dblue);
+    border-radius: 5px;
+}
+.main-score-user,.main-score-tie,.main-score-comp,.main-score-clear{
+    width: 150px;
+}
+
+.main-score-user{
+    color: var(--ptn-dblue);
+}
+
+.main-score-tie{
+    color: var(--btn-gray);
+}
+
+.main-score-comp{
+    color: var(--ptn-dred);
+}
+
+.main-score-title{
+    font: normal normal 16px var(--ssf-kanit);
+}
+
+.main-score-number{
+    font: bold normal 16px var(--ssf-kanit);
+}
+
+.main-score-clear{
+    font: bold normal 20px var(--ssf-kanit);
+
+    background-color: var(--ptn-dred);
+    border: 1px solid transparent;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    color: var(--ptn-white);
+
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.main-score-clear:hover{
+    background-color: var(--ptn-white);
+    color: var(--ptn-dred);
+
+    border-left: 1px solid var(--ptn-dred);
+}
+
+/* 2.1 Rotação */
+
+#rock-left,#paper-left{
+    transform: rotate(90deg);
+}
+
+#scissor-left{
+    transform: rotate(180deg);
+    transform: scale(-1, 1);
+}
+
+#rock-right,#paper-right{
+    transform: rotate(90deg);
+}
+
+#scissor-right{
+    transform: rotate(180deg);
+    transform: scale(-1,1);
+}
 
 /* 3. Footer */
 
 .footer-frame{
     position: absolute;
-    width: 100vw;
-    bottom: 0;
     left: 0;
+    bottom: 0;
+    width: 100%;
+    margin-top: 25px;
 
     text-align: center;
 

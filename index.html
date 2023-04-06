@@ -7,7 +7,7 @@
 
     <link rel="shortcut icon" href="media/faviconjk.ico" type="image/x-icon">
     <link rel="stylesheet" href="style/style.css">
-    <script src="js/game.js"></script>
+    <script src="js/game.js" defer></script>
     <script src="https://kit.fontawesome.com/14f2d4c777.js" crossorigin="anonymous"></script> <!-- Font Awesome -->
 
     <title>Jokenpô</title>
@@ -21,28 +21,43 @@
         <section class="main-interaction">
             <section class="main-button">
                 <section class="main-button-left">
-                    <div class="main-button-left-option"><i class="fa-solid fa-hand-back-fist"></i></div>
-                    <div class="main-button-left-option"><i class="fa-solid fa-hand"></i></div>
-                    <div class="main-button-left-option"><i class="fa-solid fa-hand-scissors"></i></div>
+                    <div class="main-button-left-option" onclick="selectOption(this);"><i class="fa-solid fa-hand-back-fist" id="rock-left"></i></div>
+                    <div class="main-button-left-option" onclick="selectOption(this);"><i class="fa-solid fa-hand" id="paper-left"></i></div>
+                    <div class="main-button-left-option" onclick="selectOption(this);"><i class="fa-solid fa-hand-scissors" id="scissor-left"></i></div>
                 </section>
                 <section class="main-button-right">
-                    <div class="main-button-right-option"><i class="fa-solid fa-hand-back-fist"></i></div>
-                    <div class="main-button-right-option"><i class="fa-solid fa-hand"></i></div>
-                    <div class="main-button-right-option"><i class="fa-solid fa-hand-scissors"></i></div>
+                    <div class="main-button-right-option"><i class="fa-solid fa-hand-back-fist" id="rock-right"></i></div>
+                    <div class="main-button-right-option"><i class="fa-solid fa-hand" id="paper-right"></i></div>
+                    <div class="main-button-right-option"><i class="fa-solid fa-hand-scissors" id="scissor-right"></i></div>
                 </section>
             </section>
             <section class="main-play">
-                <button class="main-play-button"><p class="main-play-button-text">Jogar</p></button>
+                <input type="button" value="Jogar" class="main-play-disabled" id="play-button" onclick="playGame();">
             </section>
-        </section>
-        <section class="main-result">
-            <div class="main-result-frame">
-                <h2 class="main-result-frame-text"></h2>
-            </div>
+            <section class="main-result" id="result">
+                <div class="main-result-frame">
+                    <h2 class="main-result-frame-text" id="result-text"></h2>
+                </div>
+            </section>
+            <section class="main-score">
+                <div class="main-score-user">
+                    <h3 class="main-score-title" id="username">Usuário</h3>
+                    <h3 class="main-score-number" id="score-user">0</h3>
+                </div>
+                <div class="main-score-tie">
+                    <h3 class="main-score-title">Empate</h3>
+                    <h3 class="main-score-number" id="score-tie">0</h3>
+                </div>
+                <div class="main-score-comp">
+                    <h3 class="main-score-title">Computador</h3>
+                    <h3 class="main-score-number" id="score-comp">0</h3>
+                </div>
+                <input type="button" value="Limpar" class="main-score-clear" id="score-button" onclick="resetScore();">
+            </section>
         </section>
     </main>
     <footer>
-        <section class="footer-frame">
+        <section class="footer-frame" id="footer-frame">
             <h3 class="footer-frame-text">Desenvolvido em 2023 por Matheus Zambon</h3>
         </section>
     </footer>
