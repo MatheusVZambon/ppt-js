@@ -1,0 +1,32 @@
+/*
+    SUMÁRIO
+
+    0. Configurações Gerais
+    1. Header
+    
+*/
+
+@media only screen and (max-width: 600px){
+    .main-button{
+        column-gap: 0px;
+    }
+    .main-score{
+        flex-direction: column;
+    }
+    .main-score-clear{
+        border-radius: 0 0 5px 5px;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .main-button{
+        column-gap: 20px;
+    }
+    .main-button-left,.main-button-right{
+        width: 150px;
+        height: 250px;
+    }
+    .fa-solid{
+        padding: 15px;
+    }
+}
