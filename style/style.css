@@ -3,6 +3,9 @@
 
     0. Configurações Gerais
     1. Header
+    2. Main
+        2.1. Rotação
+    3. Footer
     
 */
 
@@ -228,7 +231,7 @@ header{
     border-left: 1px solid var(--ptn-dred);
 }
 
-/* 2.1 Rotação */
+/* 2.1. Rotação */
 
 #rock-left,#paper-left{
     transform: rotate(90deg);
